@@ -1,1 +1,16 @@
-<p>list works!</p>
+
+<main class="container">
+    <h1>Listado de pokemon</h1>
+
+    <div class="card-container">
+        <!-- Tarjeta Pokemon -->
+        <div *ngFor="let pokemon of pokemons"  class="card">
+            <img src="{{getImageByPokemon(pokemon)}}" alt="{{pokemon.name}}">
+            <div class="card-content">
+                <h3>{{capitalizeFirstLetter(pokemon.name)}}</h3>
+                <p>{{getTypePokemon(pokemon)}}</p>
+                <a href="{{getUrlDetailPokemon(pokemon)}}">Ver detalle</a>
+            </div>
+        </div>
+    </div>
+</main>

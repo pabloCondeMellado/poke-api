@@ -1,0 +1,110 @@
+.container{
+    padding: 1em;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+/* Estilo de cada tarjeta */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para la imagen */
+.card img {
+    width: 100%; /* Ajusta el ancho deseado */
+    height: 150px;
+    object-fit: contain; /* Asegura que la imagen se adapte sin distorsionarse */
+    margin: auto; /* Centra la imagen dentro de la tarjeta */
+    display: block; /* Evita comportamientos inesperados */
+}
+
+/* Contenedor de texto dentro de la tarjeta */
+.card-content {
+    padding: 15px;
+}
+
+/* Título de la tarjeta */
+.card-content h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+/* Descripción o texto de la tarjeta */
+.card-content p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Enlace para ver más detalles */
+.card-content a {
+    font-size: 16px;
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card-content a:hover {
+    color: #e64a19;
+}
+
+/* Efecto de hover para las tarjetas */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales de los botones */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  /* Efectos de hover y active */
+  button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+    background-color: #003f7f;
+    border-color: #003f7f;
+  }
+  
+  /* Estilo para el botón deshabilitado */
+  button:disabled {
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+    border-color: #ccc;
+    color: #999;
+  }
