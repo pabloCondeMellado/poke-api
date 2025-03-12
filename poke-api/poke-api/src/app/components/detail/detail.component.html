@@ -1,0 +1,66 @@
+<div *ngIf="pokemon && specie" class="container">
+    <h1>{{specie.name}}</h1>
+
+    <div class="detail-image image-container ">
+      <img src="{{getImageByPokemon(pokemon)}}" alt="Frontal">
+    </div>
+
+    <div class="detail-image image-container">
+      <img *ngFor="let type of types" src="{{type.image}}" alt="{{type.name}}">
+    </div>
+
+    <h2>Datos de la especie</h2>
+
+    <p>{{specie.desc}}</p>
+
+    <div class="detail-item">
+        <strong>Altura: </strong>{{pokemon.height}} - 
+        <strong>Peso: </strong>{{pokemon.weight}} 
+    </div>
+
+    <div class="table-container">
+      <h2>Habilidades</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Habilidad</th>
+            <th>Efecto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ability of abilities">
+            <td>{{ability.name}}</td>
+            <td>{{ability.desc}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+    <div class="table-container">
+        <h2>Movimientos que puede aprender</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Movimiento</th>
+              <th>Tipo</th>
+              <th>Precsión</th>
+              <th>Poder</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let move of moves">
+              <td>{{move.id}}</td>
+              <td>{{move.name}}</td>
+              <td><img src="{{move.type.image}}" /></td>
+              <td>{{move.accuracy}}</td>
+              <td>{{move.power}}</td>
+              <td>{{move.desc}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <a href="#" class="back-button">Volver</a>
+  </div>

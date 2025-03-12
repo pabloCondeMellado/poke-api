@@ -3,6 +3,7 @@ import { PokemonService } from '../../services/pokemon.service';
 import { Pokemon } from '../../models/pokemon';
 import { Location } from '@angular/common';
 import { type } from 'os';
+import { Type } from '../../models/type';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -13,7 +14,7 @@ export class ListComponent implements OnInit  {
   public pokemons: Pokemon[] = [];
   public nextPage: string= "";
   public prevPage: string= "";
-
+  public types: Type[] = [];
   constructor(pokemonService: PokemonService, location:Location){
     this._pokemonService = pokemonService;
   }
@@ -26,6 +27,8 @@ export class ListComponent implements OnInit  {
         this.prevPage = previous;
       }
     );
+
+    
   }
 
   public next(): void{
@@ -40,7 +43,7 @@ export class ListComponent implements OnInit  {
   }
 
   public prev():void{
-    this._pokemonService.getList(this.nextPage).subscribe(
+    this._pokemonService.getList(this.prevPage).subscribe(
       (data:any)=>{
         let {count, next,previous, results} = data;
         this.pokemons = results;
@@ -48,6 +51,15 @@ export class ListComponent implements OnInit  {
         this.prevPage = previous;
       }
     );
+  }
+
+  public getData(nextPage: string): void{
+    
+  }
+
+  public getTypeImageById(id:number):string{
+    const urlImageType = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/xd/";
+    return urlImageType + id + ".png";
   }
 
   public getImageByPokemon(pokemon: Pokemon):string{
