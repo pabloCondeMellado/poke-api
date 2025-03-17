@@ -8,6 +8,10 @@
             <img src="{{getImageByPokemon(pokemon)}}" alt="{{pokemon.name}}">
             <div class="card-content">
                 <h3>{{capitalizeFirstLetter(pokemon.name)}}</h3>
+                <div class="pokemon-types">
+                    <!-- Mostrar los tipos como imágenes -->
+                    <img *ngFor="let typeImage of pokemonTypesMap.get(pokemon.name)" [src]="typeImage" alt="Tipo de Pokémon" class="tipo">
+                </div>
                 <a href="{{getUrlDetailPokemon(pokemon)}}">Ver detalles</a>
             </div>
         </div>

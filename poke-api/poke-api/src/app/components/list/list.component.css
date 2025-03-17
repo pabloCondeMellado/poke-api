@@ -169,3 +169,14 @@
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     -webkit-text-stroke: 1px #30607a;
   }
+
+  .pokemon-types{
+    display: flex;
+    
+  }
+  .tipo{
+    width: 25% !important;
+    height: 25% !important;
+    margin-top: 2px !important;
+    margin-bottom: 15px !important;
+  }

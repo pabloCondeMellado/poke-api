@@ -110,7 +110,7 @@ export class DetailComponent {
   }
 
   getTypeImageById(id: number): string{
-    const urlImageType = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/xd/";
+    const urlImageType = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-viii/sword-shield/";
     return urlImageType + id + ".png";
   }
 
