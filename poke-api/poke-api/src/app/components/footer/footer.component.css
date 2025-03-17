@@ -1,0 +1,41 @@
+.footer_links{
+    background-color: #5dabb1;
+    color: white;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_links ul li{
+    list-style: none;
+}
+
+.footer_links ul li a {
+
+    text-decoration: none;
+    color: #FFFFFF99;
+}
+.feedback {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer_links ul li a:hover {
+    color: white;
+}
+.footer_links ul {
+   padding: 0;
+}
+.container{
+    width: 100%;
+    
+}
+.column{
+    text-align: center;
+    width: 25%;
+}
+.column h4{
+    font-size: 20px;
+}

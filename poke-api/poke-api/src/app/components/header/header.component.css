@@ -35,3 +35,11 @@ h1{
 h1:hover{
   cursor: pointer;
 }
+.nombre{
+  font-size: 30px;
+}
+
+#container div:last-child{
+  margin-left: 450px;
+  padding: 5px;
+}

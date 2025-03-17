@@ -138,13 +138,6 @@ export class DetailComponent {
     this._location.back();
   }
 
-  goPrev():string{
-    return "/detail/" + (this.id -1);
-  }
-
-  goNext(): string{
-    return "/detail/" + (this.id +1);
-  }
 
   getImageByPokemon(PokemonDetail: PokemonDetail){
     let urlImage:string = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";

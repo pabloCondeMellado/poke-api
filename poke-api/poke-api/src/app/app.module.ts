@@ -8,6 +8,7 @@ import { ListComponent } from './components/list/list.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     ListComponent,
     FooterComponent,
     DetailComponent,
+    FeedbackComponent,
 
   ],
   imports: [
